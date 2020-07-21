@@ -1,0 +1,10 @@
+spring.application.name=merchant-onboarding
+server.port=8000
+
+#for Mysql hjhk
+spring.datasource.url=jdbc:mysql://localhost:3306/PaymentManagementSystem
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.ImprovedNamingStrategy
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect

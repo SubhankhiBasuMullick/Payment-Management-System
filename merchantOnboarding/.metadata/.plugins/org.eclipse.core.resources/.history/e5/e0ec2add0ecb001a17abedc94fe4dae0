@@ -1,0 +1,5 @@
+package com.microservices.merchantOnboarding.merchantOnboarding.Model;
+
+public class LoginResponse {
+
+}

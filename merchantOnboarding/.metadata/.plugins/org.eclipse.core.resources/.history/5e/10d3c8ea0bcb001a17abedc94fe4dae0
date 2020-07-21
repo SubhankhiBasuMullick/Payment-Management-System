@@ -1,0 +1,89 @@
+package com.microservices.merchantOnboarding.merchantOnboarding.EntityModel;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name="MerchantDetails")
+public class Merchant {
+   @Id
+   @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long merchantId;
+   @Column(name="Name")
+    private String name;
+   @Column(name="UserName")
+    private String username;
+   @Column(name="Password")
+    private String password;
+   @Column(name="Address")
+    private String address;
+   @Column(name="State")
+    private String state;
+   @Column(name="Country")
+    private String country;
+   @Column(name="Contact-No")
+    private long contactNo;
+    private int port;
+
+    public Merchant()
+    {
+
+    }
+
+    public Merchant(Long merchantId, String name, String username, String password, String address, String state, String country, long contactNo) {
+        this.merchantId = merchantId;
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.address = address;
+        this.state = state;
+        this.country = country;
+        this.contactNo = contactNo;
+    }
+
+    public long getMerchantId() {
+        return merchantId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public long getContactNo() {
+        return contactNo;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+}

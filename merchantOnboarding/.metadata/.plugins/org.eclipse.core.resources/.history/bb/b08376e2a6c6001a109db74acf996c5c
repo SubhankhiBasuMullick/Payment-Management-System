@@ -1,0 +1,2 @@
+spring.application.name=merchant-onboarding
+server.port=8000

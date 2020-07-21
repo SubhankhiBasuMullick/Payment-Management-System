@@ -1,0 +1,8 @@
+1595303287124	Rename package 'com.microservices.merchantOnboarding.merchantOnboarding.Model'
+1595303413913	Rename type 'MerchantDetails'
+1595303454501	Rename type 'Merchant'
+1595306125185	Rename compilation unit 'UnAuthorizedResponseAuthentication.java'
+1595308723072	Delete element
+1595309601467	Rename package 'com.microservices.merchantOnboarding.merchantOnboarding.Component.Repository'
+1595311497698	Rename type 'AuthTransaction'
+1595311764355	Rename compilation unit 'JpaAuthTransactionController.java'

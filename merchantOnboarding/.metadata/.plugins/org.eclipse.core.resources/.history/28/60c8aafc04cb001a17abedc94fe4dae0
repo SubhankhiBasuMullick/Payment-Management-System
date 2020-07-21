@@ -1,0 +1,23 @@
+package com.microservices.merchantOnboarding.merchantOnboarding.Controller;
+
+import com.microservices.merchantOnboarding.merchantOnboarding.Model.MerchantDetails;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MerchantOnboardingController {
+    @Autowired
+    private Environment environment;
+    @GetMapping("/merchant-onboarding/getMerchantById/{id}")
+    public MerchantDetails retrieveMerchantById(@PathVariable  long id)
+    {
+        MerchantDetails merchantDetails= new MerchantDetails(id,"abc","cds","abh","hkjh","jja","gaa",987689);
+        merchantDetails.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
+        return merchantDetails;
+    }
+
+
+}
