@@ -1,7 +1,5 @@
 package com.microservices.merchantOnboarding.merchantOnboarding.Configuration;
 
-import com.microservices.merchantOnboarding.merchantOnboarding.Component.UnAuthorizedResponseAuthenticationEntryPoint;
-import com.microservices.merchantOnboarding.merchantOnboarding.Component.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -17,9 +15,11 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import com.microservices.merchantOnboarding.merchantOnboarding.Component.JwtRequestFilter;
+import com.microservices.merchantOnboarding.merchantOnboarding.Component.UnAuthorizedResponseAuthenticationEntryPoint;
 
 @Configuration
 @EnableWebSecurity

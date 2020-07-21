@@ -2,16 +2,10 @@ package com.microservices.merchantOnboarding.merchantOnboarding.Controller;
 
 import java.net.URI;
 import java.util.Objects;
-import java.util.Optional;
 
 import javax.persistence.NonUniqueResultException;
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.constraints.Null;
 
-import com.microservices.merchantOnboarding.merchantOnboarding.EntityModel.Merchant;
-import com.microservices.merchantOnboarding.merchantOnboarding.Model.LoginRequest;
-import com.microservices.merchantOnboarding.merchantOnboarding.Model.LoginResponse;
-import com.microservices.merchantOnboarding.merchantOnboarding.Component.MyAuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -21,17 +15,24 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.microservices.merchantOnboarding.merchantOnboarding.Component.JwtTokenUtil;
+import com.microservices.merchantOnboarding.merchantOnboarding.Component.MyAuthenticationException;
+import com.microservices.merchantOnboarding.merchantOnboarding.EntityModel.Merchant;
+import com.microservices.merchantOnboarding.merchantOnboarding.Model.LoginRequest;
+import com.microservices.merchantOnboarding.merchantOnboarding.Model.LoginResponse;
 import com.microservices.merchantOnboarding.merchantOnboarding.Model.MerchantDetails;
 import com.microservices.merchantOnboarding.merchantOnboarding.Repository.JpaMerchantRepository;
-
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")

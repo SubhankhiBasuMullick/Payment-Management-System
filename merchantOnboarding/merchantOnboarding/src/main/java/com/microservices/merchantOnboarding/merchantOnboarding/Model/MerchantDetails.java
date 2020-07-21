@@ -4,13 +4,12 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-
-import com.microservices.merchantOnboarding.merchantOnboarding.EntityModel.Merchant;
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.microservices.merchantOnboarding.merchantOnboarding.EntityModel.Merchant;
 
 public class MerchantDetails implements UserDetails {
 	
@@ -19,15 +18,14 @@ public class MerchantDetails implements UserDetails {
 //	private final Integer id;
 	private final String username;
 	private final String password;
-	private final String roles;
+	
  	private final Collection<? extends GrantedAuthority> authorities;
 
 	public MerchantDetails(Merchant merchant) {
 //		this.id = user.getId();
 		this.username = merchant.getUsername();
 		this.password = merchant.getPassword();
-		this.roles=merchant.getRoles();
-		
+			
 		this.authorities= Arrays.stream(merchant.getRoles().split(","))
 				.map(SimpleGrantedAuthority::new)
 				.collect(Collectors.toList());
@@ -50,6 +48,8 @@ public class MerchantDetails implements UserDetails {
 	public String getPassword() {
 		return password;
 	}
+	
+	
 
 	
 

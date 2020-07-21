@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="MerchantDetails")
+@Table(name= "Merchant" )
 public class Merchant {
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,7 +32,7 @@ public class Merchant {
    @Column(name="Role")
    private String roles;
 
-    private int port;
+    
 
     public Merchant()
     {
@@ -123,13 +123,7 @@ public class Merchant {
 		this.roles = roles;
 	}
 
-	public int getPort() {
-		return port;
-	}
-
-	public void setPort(int port) {
-		this.port = port;
-	}
+	
 
     
 }

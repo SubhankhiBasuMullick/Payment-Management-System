@@ -1,12 +1,12 @@
 package com.microservices.merchantOnboarding.merchantOnboarding.Repository;
 
 
-import com.microservices.merchantOnboarding.merchantOnboarding.EntityModel.Merchant;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import com.microservices.merchantOnboarding.merchantOnboarding.EntityModel.Merchant;
 
 @Repository
 public interface JpaMerchantRepository extends JpaRepository<Merchant,Integer> {

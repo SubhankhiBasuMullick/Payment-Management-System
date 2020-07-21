@@ -7,4 +7,12 @@
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="com.microservices.merchantOnboarding.merchantOnboarding.Repository.JpaMerchantRepository"/>
+    <fullyQualifiedTypeName name="com.microservices.merchantOnboarding.merchantOnboarding.EntityModel.Merchant"/>
+    <fullyQualifiedTypeName name="com.microservices.merchantOnboarding.merchantOnboarding.Model.MerchantDetails"/>
+    <fullyQualifiedTypeName name="com.microservices.merchantOnboarding.merchantOnboarding.Repository.JpaTransactionRepository"/>
+    <fullyQualifiedTypeName name="com.microservices.merchantOnboarding.merchantOnboarding.EntityModel.Transaction"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.DecimalMin"/>
 </qualifiedTypeNameHistroy>
